@@ -1,0 +1,6 @@
+---
+admin_user: sysadmin
+ssh_public_key: "ssh-ed25519 AAAAC3... tu_email@dominio.com"
+
+http_port: 80
+ssh_port: 22

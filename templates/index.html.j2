@@ -2,94 +2,18 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servidor Web Hardened - Ansible</title>
+    <title>Servidor Web Seguro</title>
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #0f172a;
-            color: #f8fafc;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-        }
-        .container {
-            background-color: #1e293b;
-            padding: 2.5rem;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-            max-width: 600px;
-            width: 90%;
-            border: 1px solid #334155;
-        }
-        h1 {
-            color: #38bdf8;
-            margin-top: 0;
-            font-size: 1.8rem;
-        }
-        .status-badge {
-            display: inline-block;
-            background-color: #059669;
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        li {
-            padding: 0.75rem 0;
-            border-bottom: 1px solid #334155;
-            display: flex;
-            justify-content: space-between;
-        }
-        li:last-child {
-            border-bottom: none;
-        }
-        .label {
-            color: #94a3b8;
-        }
-        .value {
-            font-weight: 600;
-            color: #f1f5f9;
-        }
+        body { font-family: sans-serif; background: #0f172a; color: #f8fafc; text-align: center; padding: 50px; }
+        .card { background: #1e293b; padding: 2rem; border-radius: 8px; inline-size: fit-content; margin: auto; }
+        .badge { background: #059669; padding: 5px 10px; border-radius: 4px; font-size: 0.9rem; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <span class="status-badge">✓ Provisionado con Ansible</span>
-        <h1>Estado del Servidor Web</h1>
-        <p>Servidor web y hardening base configurados mediante Infraestructura como Código (IaC).</p>
-
-        <ul>
-            <li>
-                <span class="label">Hostname:</span>
-                <span class="value">{{ ansible_facts['hostname'] }}</span>
-            </li>
-            <li>
-                <span class="label">Sistema Operativo:</span>
-                <span class="value">{{ ansible_facts['distribution'] }} {{ ansible_facts['distribution_version'] }}</span>
-            </li>
-            <li>
-                <span class="label">Dirección IP Primaria:</span>
-                <span class="value">{{ ansible_facts['default_ipv4']['address'] | default('N/A') }}</span>
-            </li>
-            <li>
-                <span class="label">Memoria RAM Total:</span>
-                <span class="value">{{ (ansible_facts['memtotal_mb'] / 1024) | round(2) }} GB</span>
-            </li>
-            <li>
-                <span class="label">Arquitectura:</span>
-                <span class="value">{{ ansible_facts['architecture'] }}</span>
-            </li>
-        </ul>
+    <div class="card">
+        <span class="badge">Estado: Operativo</span>
+        <h1>Servidor Web Nginx</h1>
+        <p>Infraestructura aprovisionada y protegida mediante Infraestructura como Código (IaC).</p>
     </div>
 </body>
 </html>
