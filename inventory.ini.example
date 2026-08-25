@@ -1,0 +1,5 @@
+[webservers]
+nodo1 ansible_host=YOUR_EC2_IP_HERE ansible_user=ubuntu ansible_ssh_private_key_file=~/.ssh/YOUR_KEY.pem
+
+[webservers:vars]
+ansible_python_interpreter=/usr/bin/python3

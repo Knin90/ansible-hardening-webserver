@@ -1,0 +1,7 @@
+# configuracion de usuarios y Hardening SSH
+admin_user: sysadmin
+ssh_public_key: "ssh-ed25519 9CpVs9KWx/V9JJiVAc/D9+EGjCO+bM/YqFpBjRjXOI4 denis@local"
+
+# configuracion del servidor web y firewall
+http_port: 80
+ssh_port: 22
